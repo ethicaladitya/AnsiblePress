@@ -1,0 +1,7 @@
+---
+- name: Setting up LEMP environment
+  hosts: all
+  sudo: True
+  roles:
+    - common
+    - composer
