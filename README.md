@@ -38,7 +38,7 @@ alias ....="cd ../../.."
 alias .....="cd ../../../.."
 alias ~="cd ~" # `cd` is probably faster to type though
 alias web="cd /etc/nginx/sites-available"
-alias one="cd /var/www/onetheme.dev/"
+alias wpdir="cd /var/www/wordpress/"
 
 # List all files colorized in long format
 alias l="ls -lF ${colorflag}"
