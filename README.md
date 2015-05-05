@@ -18,7 +18,7 @@ Directory Structure
 ##Hosts File(Custom Url)
 Add this line to your hosts file
 ```
-192.168.50.50    wordpress.dev
+192.168.50.50    wp.dev
 ```
 **[From Vagrant's Docs](http://docs.vagrantup.com/v2/networking/private_network.html)**
 
