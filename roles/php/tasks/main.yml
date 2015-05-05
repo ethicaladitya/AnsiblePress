@@ -1,0 +1,37 @@
+---
+- name: Add PHP 5.5 PPA
+  apt_repository: repo='ppa:ondrej/php5' update_cache=yes
+
+- name: Install php5-fpm
+  apt: name={{ item }} state=present force=yes
+  with_items:
+  - php5-common
+  - php5-fpm
+  - php5-mysql
+  - php5-cli
+  - php5-cgi
+  - php5-curl
+  - php-pear
+  # Optional Packages
+  # - php5-mysqlnd
+  # - php5-xmlrpc
+  # - php5-mcrypt
+  # - php5-gd
+  # - php5-dev
+  # - php5-imap
+  # - libssh2-php
+  # - php5-intl
+  # - php5-imagick
+  # - php5-memcached
+  # - php5-ming
+  # - php5-ps
+  # - php5-pspell
+  # - php5-recode
+  # - php5-snmp
+  # - php5-tidy
+  # - php5-xmlrpc
+  # - php5-xsl
+  # - php5-xcache
+
+- name: Start php5-fpm service
+  service: name=php5-fpm state=started enabled=true
