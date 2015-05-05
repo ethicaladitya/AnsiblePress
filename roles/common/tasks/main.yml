@@ -13,3 +13,9 @@
   - git
   - tree
   - man
+
+- name: Copy aliases
+  copy: src=../files/aliases dest=/home/vagrant/.aliases owner=vagrant mode=0600
+
+- name: Copy bash_profile
+  copy: src=../files/bash_profile dest=/home/vagrant/.bash_profile owner=vagrant mode=0600
