@@ -1,5 +1,5 @@
 # AnsiblePress
-A minimal WordPress(LEMP) development environment using: vagrant, virtualbox, Ubuntu Trusty 14.04 LTS, ansible, Nginx, MySQL, and PhP. This is meant to be a boilerplate for continued development. This is meant to be forked and built upon so feel free.
+A minimal WordPress(LEMP) development environment using: Vagrant, Virtualbox, Ansible, Ubuntu, Nginx, MySQL, and PhP. This is meant to be a quick and easy boilerplate for continued development.
 
 ##Quick Setup
 1. Install Vagrant and Virtual Box
@@ -16,16 +16,13 @@ Directory Structure
 </pre>
 
 ##Hosts File(Custom Url)
-On OSX open up your terminal and type `sudo nano /etc/hosts` you will likely be prompted to enter your system password.
-
-At the end of the file add this line
+Add this line to your hosts file
 ```
 192.168.50.50    wordpress.dev
 ```
+**[From Vagrant's Docs](http://docs.vagrantup.com/v2/networking/private_network.html)**
 
-Press `control x` to save and exit. You'll now be able to access your development box from wp.dev address
-
-You can change the ip address to any ip address but you should use an IP from the reserved private address space. These IPs are guaranteed to never be publicly routable, and most routers actually block traffic from going to them from the outside world.
+>While you can choose any IP you'd like, you should use an IP from the reserved private address space. These IPs are guaranteed to never be publicly routable, and most routers actually block traffic from going to them from the outside world.
 
 ##Aliases
 I added some helper files extracted from my dotfiles repo. You can check them out here if you want more details.
