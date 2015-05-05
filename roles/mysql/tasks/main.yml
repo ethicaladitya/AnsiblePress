@@ -18,23 +18,10 @@
   mysql_db: name=test state=absent
 
 - name: Add WordPress Database
-  mysql_db: name={{database_name}} state=present
+  mysql_db: name={{database.name}} state=present
 
 - name: Add Database user with privileges
-  mysql_user: name={{database_user}}
-              password=password
-              priv={{database_name}}.*:ALL
+  mysql_user: name={{database.user}}
+              password={{database.password}}
+              priv={{database.name}}.*:ALL
               state=present
-
-# - name: Copying dump file temporarily
-#   copy: src=../files/peace.sql dest=/tmp/peace.sql
-
-# - name: Restore peace databse from dump file
-#   mysql_db: name=peace
-#             state=import
-#             target=/tmp/peace.sql
-#   notify: restart mysql
-
-# - name: Delete temporary database dump file
-#   file: path=/tmp/peace.sql state=absent
-#   notify: restart mysql
