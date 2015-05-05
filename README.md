@@ -15,11 +15,14 @@ Directory Structure
 │   ├── WordPress
 </pre>
 
-##Hosts File(Custom Url)
-Add this line to your hosts file
+All that's left is to go to wp.dev in your browser and follow WordPress's famous 5-minute installer and start working.
+
+##Custom Url
+In OSX add this to the end of your `/ect/hosts` file
 ```
 192.168.50.50    wp.dev
 ```
+
 **[From Vagrant's Docs](http://docs.vagrantup.com/v2/networking/private_network.html)**
 
 >While you can choose any IP you'd like, you should use an IP from the reserved private address space. These IPs are guaranteed to never be publicly routable, and most routers actually block traffic from going to them from the outside world.
