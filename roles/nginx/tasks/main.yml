@@ -1,0 +1,39 @@
+---
+- name: Add Nginx PPA
+  apt_repository: repo="ppa:nginx/stable" update_cache=yes
+
+- name: Install Nginx
+  apt: name=nginx state=present force=yes
+
+- name: Grab h5bp/server-configs-nginx
+  git: repo="https://github.com/h5bp/server-configs-nginx.git"
+       dest=/tmp/server-configs-nginx
+       version="1.0.0"
+       force=yes
+
+- name: Copy over h5bp configuration
+  command: cp -r /tmp/server-configs-nginx/{{ item }} /etc/nginx/{{ item }}
+  with_items:
+    - mime.types
+    - h5bp/
+
+- name: Create nginx.conf
+  template: src=nginx.conf.j2 dest=/etc/nginx/nginx.conf
+  notify: restart nginx
+
+- name: Delete default server
+  file: path=/etc/nginx/sites-available/default state=absent
+
+- name: Disable default server
+  file: path=/etc/nginx/sites-enabled/default state=absent
+  notify: restart nginx
+
+- name: Create base WordPress config
+  template: src=wordpress.conf.j2 dest=/etc/nginx/wordpress.conf
+
+- name: Create Nginx configuration file
+  template: src=site.conf.j2 dest=/etc/nginx/sites-available/{{site_name}} owner=vagrant group=www-data
+
+- name: Create Nginx configuration symlink
+  file: src=/etc/nginx/sites-available/{{site_name}} dest=/etc/nginx/sites-enabled/{{site_name}} owner=vagrant group=www-data state=link
+  notify: restart nginx
