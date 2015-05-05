@@ -1,0 +1,20 @@
+---
+mysql_root_user: root
+mysql_root_pass: rootpass
+
+web: {
+    user: web,
+    group: www-data
+}
+
+site: {
+  name: wp.dev,
+  ip: "192.168.50.50",
+  www_root: /var/www/wordpress
+}
+
+database: {
+  name: wordpress,
+  user: wordpress,
+  password: password
+}
