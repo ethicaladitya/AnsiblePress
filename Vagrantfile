@@ -2,7 +2,7 @@
 # vi: set ft=ruby :
 Vagrant.configure(2) do |config|
 
-  site_dir = "/var/www/onetheme.dev/"
+  site_dir = "/var/www/wordpress/"
 
   config.vm.box = "ubuntu/trusty64"
 
@@ -16,10 +16,15 @@ Vagrant.configure(2) do |config|
 
   config.vm.provision :ansible do |ansible|
     ansible.playbook = './site.yml'
+    ansible.groups = {
+      'web' => ['development'],
+      'development' => ['default']
+    }
 
     ansible.extra_vars = {
       ansible_ssh_user: 'vagrant',
-      user: 'vagrant'
+      user: 'vagrant',
+
     }
     ansible.sudo = true
   end
