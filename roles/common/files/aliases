@@ -1,0 +1,20 @@
+# Easier navigation: .., ..., ...., ....., ~ and -
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias ~="cd ~" # `cd` is probably faster to type though
+alias web="cd /etc/nginx/sites-available"
+alias one="cd /var/www/onetheme.dev/"
+
+# List all files colorized in long format
+alias l="ls -lF ${colorflag}"
+
+# List all files colorized in long format, including dot files
+alias la="ls -laF ${colorflag}"
+
+# List only directories
+alias lsd="ls -lF ${colorflag} | grep --color=never '^d'"
+
+alias restart="sudo service nginx restart; sudo service php5-fpm restart"
+alias status="service nginx status; service php5-fpm status; service mysql status"
