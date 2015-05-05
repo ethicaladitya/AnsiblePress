@@ -4,4 +4,8 @@
   sudo: True
   roles:
     - common
+    - php
+    - nginx
+    - mysql
     - composer
+    - wp-cli
