@@ -1,0 +1,40 @@
+---
+- name: Install MySQL Server
+  apt: name=mysql-server state=present
+
+- name: Install MySQL Client
+  apt: name=mysql-client state=present
+
+- name: Install MySQL Python for MySQL User/DB automation
+  apt: name=python-mysqldb state=present
+
+- name: Delete anonymous MySQL server user for current hostname
+  action: mysql_user user='' host={{ ansible_hostname }} state=absent
+
+- name: Delete anonymous MySQL server user for localhost
+  action: mysql_user user='' state=absent
+
+- name: Remove the test database
+  mysql_db: name=test state=absent
+
+- name: Add WordPress Database
+  mysql_db: name={{database_name}} state=present
+
+- name: Add Database user with privileges
+  mysql_user: name={{database_user}}
+              password=password
+              priv={{database_name}}.*:ALL
+              state=present
+
+# - name: Copying dump file temporarily
+#   copy: src=../files/peace.sql dest=/tmp/peace.sql
+
+# - name: Restore peace databse from dump file
+#   mysql_db: name=peace
+#             state=import
+#             target=/tmp/peace.sql
+#   notify: restart mysql
+
+# - name: Delete temporary database dump file
+#   file: path=/tmp/peace.sql state=absent
+#   notify: restart mysql
