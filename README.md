@@ -1,5 +1,5 @@
 # AnsiblePress
-A minimal WordPress(LEMP) development environment using: Vagrant, Virtualbox, Ansible, Ubuntu, Nginx, MySQL, and PhP. This is meant to be a quick and easy boilerplate for continued development.
+A minimal WordPress (LEMP) development environment using: Vagrant, Virtualbox, Ansible, Ubuntu, Nginx, MySQL, and PhP. This is meant to be a quick and easy boilerplate for continued development.
 
 ##Quick Setup
 1. Install Vagrant and Virtual Box
@@ -71,7 +71,4 @@ database: {
 ```
 
 ##Contributions
-Pull requests are always welcome.
-
-##Bugs
-Feel free to add an issue and I'll do my best to fix this.
+Pull requests are always welcome OR If you see a bug or error just open a new [issue](https://github.com/jeanpierreb/AnsiblePress/issues)
