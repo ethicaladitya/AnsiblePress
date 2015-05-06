@@ -28,7 +28,7 @@ In OSX add this to the end of your `/ect/hosts` file
 >While you can choose any IP you'd like, you should use an IP from the reserved private address space. These IPs are guaranteed to never be publicly routable, and most routers actually block traffic from going to them from the outside world.
 
 ##Aliases
-I added some helper files extracted from my dotfiles repo. You can check them out here if you want more details.
+I added some helper files extracted from my dotfiles repo. You can check them out [here](https://github.com/jeanpierreb/dotfiles) if you want more details.
 
 Shortcuts included:
 ```bash
