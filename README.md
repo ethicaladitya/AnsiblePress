@@ -71,4 +71,4 @@ database: {
 ```
 
 ##Contributions
-Pull requests are always welcome OR If you see a bug or error just open a new [issue](https://github.com/jeanpierreb/AnsiblePress/issues)
+Pull requests are always welcome.
