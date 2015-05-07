@@ -1,0 +1,4 @@
+wp_debug: true
+wp_version: 4.2.1
+auto_up_disable: false
+core_update_level: false
