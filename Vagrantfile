@@ -10,8 +10,15 @@ Vagrant.configure(2) do |config|
     web.vm.network "forwarded_port", guest: 80, host: 8080
     web.vm.network "forwarded_port", guest: 443, host: 8443
     web.vm.network "private_network", ip: "192.168.50.50"
-    web.vm.synced_folder "../WordPress", site_dir, owner: 'vagrant', group: 'www-data', mount_options: ['dmode=776', 'fmode=775']
+    web.vm.synced_folder "../WordPress", "/vagrant-nfs", type: "nfs"
+  end
 
+  config.bindfs.bind_folder "/vagrant-nfs", site_dir, :owner => "root", :group => "root"
+
+
+  config.vm.provider "virtualbox" do |v|
+    v.memory = 4096
+    v.cpus = 2
   end
 
   config.vm.provision :ansible do |ansible|
