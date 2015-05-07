@@ -16,5 +16,7 @@ site: {
 database: {
   name: wordpress,
   user: wordpress,
-  password: password
+  password: password,
+  prefix: wp_,
+  host: localhost
 }
