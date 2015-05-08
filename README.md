@@ -1,4 +1,4 @@
-# AnsiblePress
+# AnsiblePress (alpha)
 A minimal WordPress (LEMP) development environment using: Vagrant, Virtualbox, Ansible, Ubuntu, Nginx, MySQL, and PhP. This is meant to be a quick and easy boilerplate for continued development.
 
 ##Pre-Requisites
