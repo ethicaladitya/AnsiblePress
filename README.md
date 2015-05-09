@@ -4,8 +4,8 @@ A minimal WordPress (LEMP) development environment using: Vagrant, Virtualbox, A
 ##Pre-Requisites
 1. Vagrant
 2. VirtualBox
-3. Vagrant Host Updater
-3. Vagrant Bindfs
+3. Vagrant Host Updater (optional)
+3. Vagrant Bindfs (required)
 4. Ansible
 
 ##Quick Setup
