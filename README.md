@@ -9,9 +9,8 @@ A minimal WordPress (LEMP) development environment using: Vagrant, Virtualbox, A
 4. Ansible
 
 ##Quick Setup
-1. Run `git clone git@github.com:jeanpierreb/AnsiblePress.git && mkdir WordPress` from your project root
-2. ~~Run `git clone git@github.com:WordPress/WordPress.git`~~
-3. Run `vagrant up` from the AnsiblePress/ directory
+1. Run `git clone git@github.com:jeanpierreb/AnsiblePress.git && mkdir WordPress && cd AnsiblePress` from your project root
+2. Then run `vagrant up`
 
 Directory Structure
 <pre>
