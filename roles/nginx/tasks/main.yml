@@ -23,7 +23,6 @@
 
 - name: Delete default server
   file: path=/etc/nginx/sites-available/default state=absent
-  notify: restart nginx
 
 - name: Disable default server
   file: path=/etc/nginx/sites-enabled/default state=absent
@@ -31,7 +30,6 @@
 
 - name: Create base WordPress config
   template: src=wordpress.conf.j2 dest=/etc/nginx/wordpress.conf
-  notify: restart nginx
 
 - name: Create Nginx configuration file
   template: src=site.conf.j2 dest=/etc/nginx/sites-available/{{site.name}} owner=vagrant group={{web.group}}
