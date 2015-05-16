@@ -1,16 +1,20 @@
-# AnsiblePress
+# AnsiblePress (alpha)
 A minimal WordPress (LEMP) development environment using: Vagrant, Virtualbox, Ansible, Ubuntu, Nginx, MySQL, and PhP. This is meant to be a quick and easy boilerplate for continued development.
 
+##Pre-Requisites
+1. Vagrant
+2. VirtualBox
+3. Vagrant Host Updater (optional)
+3. Vagrant Bindfs (required)
+4. Ansible
+
 ##Quick Setup
-1. Install Vagrant and Virtual Box
-2. Create a project directory `example.com` then cd into it `cd example.com` 
-3. Run `git clone git@github.com:jeanpierreb/AnsiblePress.git`
-4. Run `git clone git@github.com:WordPress/WordPress.git`
-5. From your AnsiblePress directory run `vagrant up`
+1. Run `git clone git@github.com:jeanpierreb/AnsiblePress.git && mkdir WordPress && cd AnsiblePress` from your project root
+2. Then run `vagrant up`
 
 Directory Structure
 <pre>
-├── example.com
+├── project_root
 │   ├── AnsiblePress
 │   ├── WordPress
 </pre>
