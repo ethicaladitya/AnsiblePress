@@ -1,5 +1,5 @@
 ---
-- name: Add PHP 5.5 PPA
+- name: Add PHP 5 PPA
   apt_repository: repo='ppa:ondrej/php5' update_cache=yes
 
 - name: Install php5-fpm
