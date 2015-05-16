@@ -4,7 +4,7 @@
   sudo: True
   roles:
     - common
-    - php
+    - php-fpm
     - nginx
     - mysql
     - composer
