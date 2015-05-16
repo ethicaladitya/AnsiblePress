@@ -74,6 +74,8 @@ define('WPLANG', '');
  */
 define('WP_DEBUG', '{{wp_debug}}');
 
+define( 'WP_CONTENT_DIR', dirname(__FILE__) . '/app' );
+
 /* That's all, stop editing! Happy blogging. */
 
 /** Absolute path to the WordPress directory. */
