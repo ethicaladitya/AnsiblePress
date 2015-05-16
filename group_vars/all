@@ -10,7 +10,7 @@ web: {
 site: {
   name: wp.dev,
   ip: "192.168.50.50",
-  www_root: /var/www/wordpress
+  www_root: /var/www/
 }
 
 database: {
