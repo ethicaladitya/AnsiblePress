@@ -83,3 +83,4 @@ Pull requests are always welcome.
 - [ ] Screencast
 - [ ] Update WordPress
 - [ ] Use Sage/Bedrock
+- [ ] Multisite Support
