@@ -76,3 +76,10 @@ database: {
 
 ##Contributions
 Pull requests are always welcome.
+
+##Todo
+- [ ] Install phpmyadmin
+- [ ] Tutorial (Medium)
+- [ ] Screencast
+- [ ] Update WordPress
+- [ ] Use Sage/Bedrock
